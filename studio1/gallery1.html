@@ -11,6 +11,10 @@
     <link rel="stylesheet" href="assets/css/plugins.min.css">
     <!-- Custom CSS File -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/jquery.simpleLens.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/jquery.simpleGallery.css">
+
+
   </head>
   <body>
     <div class="ms-main-container">
@@ -67,12 +71,6 @@
                   <span class="nav-item__label">Interactively disintermediate</span>
                 </a>
               </li>
-               <li class="nav-item">
-                <a href="video.html" data-type="page-transition">
-                  <span class="ms-btn">Documentary Films</span>
-                  <span class="nav-item__label">Our great jobs</span>
-                </a>
-              </li>
               <!-- Nav Link -->
               <!-- <li class="nav-item">
                 <a href="blog.html" data-type="page-transition">
@@ -97,14 +95,72 @@
         <!-- Page Title -->
         <div class="ms-section__block">
           <div class="ms-page-title">
-            <h2 class="page-header">Gallery</h2>
-            <p class="page-desc">Moments that are lost forever,
-Captured by a photographer's fervour.</p>
+            <h2 class="page-header">Pixel Perfect Photography</h2>
+            <p class="page-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           </div>
         </div>
         <!-- Page Content -->
+       
+
         <div class="ms-section__block">
-          <div id="gallery">
+          <div class="container">
+            <div class="row">
+            <div class="col-md-6 float-left">
+                <div class="simpleLens-gallery-container" id="demo-1">
+            <div class="simpleLens-container">
+                <div class="simpleLens-big-image-container">
+                    <a class="simpleLens-lens-image" data-lens-image="assets/images/Albums-Assignment/3.jpg">
+                        <img src="assets/images/Albums-Assignment/3.jpg" class="simpleLens-big-image">
+                    </a>
+                </div>
+            </div>
+       
+        </div>
+           </div>
+             <div class="col-md-6 float-left ">
+                <div class="simpleLens-gallery-container" id="demo-1">
+             <div class="simpleLens-container">
+                <div class="simpleLens-big-image-container" id="last">
+                    <a class="simpleLens-lens-image" data-lens-image="assets/images/Albums-Assignment/4.jpg">
+                        <img src="assets/images/Albums-Assignment/4.jpg" class="simpleLens-big-image">
+                    </a>
+                </div>
+            </div>
+          </div>
+           </div>
+         </div>
+       </div>
+        <div class="container">
+            <div class="row">
+            <div class="col-md-6 float-left">
+                <div class="simpleLens-gallery-container" id="demo-1">
+            <div class="simpleLens-container">
+                <div class="simpleLens-big-image-container">
+                    <a class="simpleLens-lens-image" data-lens-image="assets/images/Albums-Assignment/5.jpg">
+                        <img src="assets/images/Albums-Assignment/5.jpg" class="simpleLens-big-image">
+                    </a>
+                </div>
+            </div>
+       
+        </div>
+           </div>
+             <div class="col-md-6 float-left ">
+                <div class="simpleLens-gallery-container" id="demo-1">
+             <div class="simpleLens-container">
+                <div class="simpleLens-big-image-container" id="last">
+                    <a class="simpleLens-lens-image" data-lens-image="assets/images/Albums-Assignment/6.jpg">
+                        <img src="assets/images/Albums-Assignment/6.jpg" class="simpleLens-big-image">
+                    </a>
+                </div>
+            </div>
+          </div>
+           </div>
+         </div>
+       </div>
+         
+
+          <!--<div id="gallery">
+
             <img alt="image 2"
             src="assets/images/gallery/1.jpg"
             data-image="assets/images/gallery/1.jpg"
@@ -201,11 +257,9 @@ Captured by a photographer's fervour.</p>
             src="assets/images/gallery/24.jpg"
             data-image="assets/images/gallery/24.jpg"
             data-description="image placeholder">
-          </div>
+          </div>-->
         </div>
-       <!-- <div class="ms-section__block center-block">
-          <a href="#" class="ms-button" data-title="load more" data-type="page-transition">load more</a>
-        </div>-->
+       
       </main>
       <!-- Footer -->
       <footer>
@@ -222,10 +276,39 @@ Captured by a photographer's fervour.</p>
     </div>
     <!-- JS Libraries -->
     <!-- jquery-2.1.3.min js -->
-    <script type="text/javascript" src='assets/js/jquery-3.2.1.min.js'></script>
+   <!-- <script type="text/javascript" src='assets/js/jquery-3.2.1.min.js'></script> -->
+   <script src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
     <!-- Vendors -->
     <script type="text/javascript" src='assets/js/plugins.min.js'></script>
     <!-- Main js -->
     <script type="text/javascript" src="assets/js/main.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.simpleGallery.js"></script>
+<script type="text/javascript" src="assets/js/jquery.simpleLens.js"></script>
+ <script>
+    $(document).ready(function(){
+        $('#demo-1 .simpleLens-thumbnails-container img').simpleGallery({
+            loading_image: 'assets/images/loading.gif'
+        });
+
+        $('#demo-1 .simpleLens-big-image').simpleLens({
+            loading_image: 'assets/images/loading.gif'
+        });
+    });
+</script>
+
+<script>
+    $(document).ready(function(){
+        $('#demo-2 .simpleLens-thumbnails-container img').simpleGallery({
+            loading_image: 'assets/images/loading.gif',
+            show_event: 'click'
+        });
+
+        $('#demo-2 .simpleLens-big-image').simpleLens({
+            loading_image: 'assets/images/loading.gif',
+            open_lens_event: 'click'
+        });
+    });
+</script>
+
   </body>
 </html>
